@@ -1,0 +1,68 @@
+ <div id="about">
+        <div class="container">
+            <div class="row">
+                <link rel="stylesheet" href="about me.css">
+                <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+                <div class="about-col-1">
+                    <img src="img/IMG20230510092319.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hello, I'm Urmit Patel, a dedicated and skilled Software Engineer with a passion for crafting efficient and elegant solutions. With a solid foundation in computer science and several years of hands-on experience, I have honed my abilities in designing, developing, and implementing software applications that meet both user needs and business objectives. My expertise spans a range of programming languages and technologies, allowing me to adapt and thrive in dynamic and fast-paced environments. I am a detail-oriented individual who believes in writing clean, maintainable code and collaborating effectively with cross-functional teams. My commitment to continuous learning drives me to stay up-to-date with the latest industry trends and best practices. I am excited about the opportunity to contribute my technical skills and innovative mindset to projects that make a meaningful impact.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design training at ET Institute</li>
+                            <li><span>2019-2021</span><br>Software Developer </li>
+                            <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li>
+                            <li><span>2017-2019</span><br>Internship at eKart ecommerce.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>UI/UX Design training at ET Institute</li>
+                            <li><span>2025 (ARTIFICIAL INTILLIGENCE ENGINEER)</span><br>BTECH From Parul University</li>
+                            <li><span>2020</span><br>HSC from Nalnda school</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tabLinks = document.getElementsByClassName('tab-links');
+            var tabContents = document.getElementsByClassName('tab-contents');
+    
+            function openTab(tabName) {
+                for (tabLink of tabLinks) {
+                    tabLink.classList.remove('active-link');
+                }
+                for (tabContent of tabContents) {
+                    tabContent.classList.remove('active-tab');
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tabName).classList.add('active-tab');
+            }
+    
+            // JavaScript for handling the mobile navigation menu
+            document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+                document.querySelector('nav ul').classList.toggle('show');
+            });
+    
+            document.querySelector('.fas.fa-times').addEventListener('click', function () {
+                document.querySelector('nav ul').classList.remove('show');
+            });
+    
+        </script>
+    </div>
+  
